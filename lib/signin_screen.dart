@@ -53,8 +53,10 @@ class SignInScreenState extends State<SignInScreen> {
 
     if (!mounted) return;
 
+    Navigator.of(context).pop();
+
+
     if (signinResponse.isLeft()) {
-      Navigator.of(context).pop();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(signinResponse.failureMessage),

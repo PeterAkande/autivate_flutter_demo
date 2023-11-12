@@ -8,7 +8,7 @@ class UserProfileScreen extends StatelessWidget {
 
   static Route<void> route(User user) {
     return MaterialPageRoute(
-      builder: (_) => UserProfileScreen(user: user),
+      builder:   (_) => UserProfileScreen(user: user),
     );
   }
 

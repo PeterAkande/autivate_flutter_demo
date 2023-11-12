@@ -43,6 +43,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
     if (!mounted) return;
 
+    Navigator.of(context).pop();
+
     if (forgotPasswordResponse.isLeft()) {
       Navigator.of(context).pop();
       ScaffoldMessenger.of(context).showSnackBar(
@@ -55,8 +57,6 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
       return;
     }
 
-
-    Navigator.of(context).pop();
 
     // Show information (SnackBar)
     ScaffoldMessenger.of(context).showSnackBar(

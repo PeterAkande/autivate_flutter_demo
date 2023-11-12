@@ -46,9 +46,10 @@ class SignUpScreenState extends State<SignUpScreen> {
 
       if (!mounted) return;
 
+      Navigator.of(context).pop();
+
       if (signUpResponse.isLeft()) {
         // Close loading dialog
-        Navigator.of(context).pop();
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
